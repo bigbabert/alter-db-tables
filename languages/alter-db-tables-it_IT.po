@@ -1,0 +1,527 @@
+# Copyright (C) 2015 AlterTech
+# This file is distributed under the same license as the AlterTech package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Alter_DB_Tables 1.0.0\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/plugins/alter-db-tables\n"
+"POT-Creation-Date: 2015-10-16 20:00+0200\n"
+"PO-Revision-Date: 2015-10-16 20:00+0200\n"
+"Last-Translator: Alberto <info@altertech.it>\n"
+"Language-Team: English <info@altertech.it>\n"
+"Language: it_IT\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.5\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-KeywordsList: __;_e;_n;_x;esc_html_e;esc_html__;esc_attr_e;"
+"esc_attr__;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;_x:1,2c;_n:1,2\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: admin/alter-db-tables-admin-class.php:287
+#: admin/alter-db-tables-admin-class.php:548
+msgid "Settings"
+msgstr "Impostazioni"
+
+#: admin/alter-db-tables-admin-class.php:288
+msgid "Donate"
+msgstr ""
+
+#: admin/alter-db-tables-admin-class.php:379
+msgid "Congratulations!  The database table has been deleted successfully."
+msgstr "Congratulazioni! Il database è stato eliminato con successo"
+
+#: admin/alter-db-tables-admin-class.php:381
+msgid "Error deleting table. Please verify the table exists."
+msgstr ""
+
+#: admin/alter-db-tables-admin-class.php:386
+msgid ""
+"No Database Table was selected to export. Please select a Database Table for "
+"exportation."
+msgstr ""
+
+#: admin/alter-db-tables-admin-class.php:398
+msgid "No Database Table was selected. Please select a Database Table."
+msgstr ""
+
+#: admin/alter-db-tables-admin-class.php:402
+msgid "No Input File was selected. Please enter an Input File."
+msgstr ""
+
+#: admin/alter-db-tables-admin-class.php:407
+msgid ""
+"The Input File does not contain the .csv file extension. Please choose a "
+"valid .csv file."
+msgstr ""
+
+#: admin/alter-db-tables-admin-class.php:445
+msgid ""
+"Starting Row value exceeds the number of entries being updated to the "
+"database from the .csv file."
+msgstr ""
+
+#: admin/alter-db-tables-admin-class.php:456
+msgid "Columns do not match."
+msgstr ""
+
+#: admin/alter-db-tables-admin-class.php:457
+msgid ""
+"The number of columns in the database for this table does not match the "
+"number of columns attempting to be imported from the .csv file."
+msgstr ""
+
+#: admin/alter-db-tables-admin-class.php:458
+msgid ""
+"Please verify the number of columns attempting to be imported in the "
+"\"Select Input File\" exactly matches the number of columns displayed in the "
+"\"Table Preview\"."
+msgstr ""
+
+#: admin/alter-db-tables-admin-class.php:493
+#: admin/alter-db-tables-admin-class.php:497
+msgid "Congratulations!  The database has been updated successfully."
+msgstr ""
+
+#: admin/alter-db-tables-admin-class.php:498
+msgid "record(s) were inserted into the"
+msgstr ""
+
+#: admin/alter-db-tables-admin-class.php:498
+msgid "database table."
+msgstr ""
+
+#: admin/alter-db-tables-admin-class.php:502
+msgid ""
+"There were no rows to update. All .csv values already exist in the database."
+msgstr ""
+
+#: admin/alter-db-tables-admin-class.php:504
+msgid "There was a problem with the database query."
+msgstr ""
+
+#: admin/alter-db-tables-admin-class.php:505
+msgid "A duplicate entry was found in the database for a .csv file entry."
+msgstr ""
+
+#: admin/alter-db-tables-admin-class.php:506
+msgid "If necessary; please use the option below to \"Update Database Rows\"."
+msgstr ""
+
+#: admin/alter-db-tables-admin-class.php:511
+msgid ""
+"No valid .csv file was found at the specified url. Please check the \"Select "
+"Input File\" field and ensure it points to a valid .csv file."
+msgstr ""
+
+#: admin/alter-db-tables-admin-class.php:520
+#: admin/alter-db-tables-admin-class.php:528
+#: admin/alter-db-tables-admin-class.php:536
+msgid "click to dismiss"
+msgstr ""
+
+#: admin/alter-db-tables-admin-class.php:544
+msgid ""
+"This plugin allows you to insert CSV file data into your WordPress database "
+"table. You can also"
+msgstr ""
+"Questo plugin offre la possibilità di importare dati nel vostro database con "
+"file CSV. Ma potete anche"
+
+#: admin/alter-db-tables-admin-class.php:544
+msgid "export the content of a database</a> ."
+msgstr "esportare contenuti dal database</a> ."
+
+#: admin/alter-db-tables-admin-class.php:549
+msgid "Guide"
+msgstr ""
+
+#: admin/alter-db-tables-admin-class.php:557
+msgid "Select Database Table:"
+msgstr "Selezionare la Tabella del Database"
+
+#: admin/alter-db-tables-admin-class.php:580
+msgid "Select Input File:"
+msgstr ""
+
+#: admin/alter-db-tables-admin-class.php:588
+msgid "File must end with a .csv extension."
+msgstr ""
+
+#: admin/alter-db-tables-admin-class.php:589
+msgid "Number of .csv file Columns:"
+msgstr ""
+
+#: admin/alter-db-tables-admin-class.php:593
+msgid "Select Starting Row:"
+msgstr ""
+
+#: admin/alter-db-tables-admin-class.php:597
+msgid "Defaults to row 1 (top row) of .csv file."
+msgstr ""
+
+#: admin/alter-db-tables-admin-class.php:600
+msgid "Disable \"auto_increment\" Column:"
+msgstr ""
+
+#: admin/alter-db-tables-admin-class.php:603
+msgid "Bypasses the \"auto_increment\" column;"
+msgstr ""
+
+#: admin/alter-db-tables-admin-class.php:604
+msgid ""
+"This will reduce (for the purposes of importation) the number of DB columns "
+"by \"1\"."
+msgstr ""
+
+#: admin/alter-db-tables-admin-class.php:607
+msgid "Update Database Rows:"
+msgstr ""
+
+#: admin/alter-db-tables-admin-class.php:610
+msgid ""
+"Will update exisiting database rows when a duplicated primary key is "
+"encountered."
+msgstr ""
+
+#: admin/alter-db-tables-admin-class.php:611
+msgid "Defaults to all rows inserted as new rows."
+msgstr ""
+
+#: admin/alter-db-tables-admin-class.php:617
+msgid "IMPORT CSV"
+msgstr ""
+
+#: admin/alter-db-tables-admin-class.php:618
+msgid "DELETE TABLE"
+msgstr ""
+
+#: admin/alter-db-tables-admin-class.php:624
+msgid "Step 1 (Select Database Table):"
+msgstr ""
+
+#: admin/alter-db-tables-admin-class.php:626
+msgid "All WP database tables will be queried and listed in the dropdown box."
+msgstr ""
+
+#: admin/alter-db-tables-admin-class.php:627
+msgid "Select the table name which will be used for the query."
+msgstr ""
+
+#: admin/alter-db-tables-admin-class.php:628
+msgid ""
+"Once the table is selected; the \"Table Preview\" will display the structure "
+"of the table."
+msgstr ""
+
+#: admin/alter-db-tables-admin-class.php:629
+msgid ""
+"By structure, this means all column names will be listed in the order they "
+"appear in the database."
+msgstr ""
+
+#: admin/alter-db-tables-admin-class.php:630
+msgid ""
+"This can be used to match the .csv file prior to execution; and verify it "
+"contains the same structure of columns."
+msgstr ""
+
+#: admin/alter-db-tables-admin-class.php:633
+msgid "Step 2 (Select Input File):"
+msgstr ""
+
+#: admin/alter-db-tables-admin-class.php:635
+msgid "The option will be used to locate the file to be used for execution."
+msgstr ""
+
+#: admin/alter-db-tables-admin-class.php:636
+msgid "A direct url to a .csv file may be entered into the text field."
+msgstr ""
+
+#: admin/alter-db-tables-admin-class.php:637
+msgid ""
+"Alternatively, the \"Upload\" button may be used to initiate the WordPress "
+"uploader and manager."
+msgstr ""
+
+#: admin/alter-db-tables-admin-class.php:638
+msgid ""
+"From here, the file can be uploaded from a computer or selected from the "
+"media library."
+msgstr ""
+
+#: admin/alter-db-tables-admin-class.php:639
+msgid ""
+"The \"Number of .csv file Columns\" will populate when the Input File field "
+"contains a valid .csv file."
+msgstr ""
+
+#: admin/alter-db-tables-admin-class.php:642
+msgid "Step 3 (Select Starting Row):"
+msgstr ""
+
+#: admin/alter-db-tables-admin-class.php:644
+msgid ""
+"The .csv file will contain rows, which get converted to database table "
+"entries."
+msgstr ""
+
+#: admin/alter-db-tables-admin-class.php:645
+msgid ""
+"This option will allow customization of the starting row of the .csv file to "
+"be used during the importation."
+msgstr ""
+
+#: admin/alter-db-tables-admin-class.php:646
+msgid "Row 1 is always the top row of the .csv file."
+msgstr ""
+
+#: admin/alter-db-tables-admin-class.php:647
+msgid ""
+"For example: If the .csv file contains column headers (column names), it "
+"would most likely be desirable to start with row 2 of the .csv file; "
+"preventing importation of the column names row."
+msgstr ""
+
+#: admin/alter-db-tables-admin-class.php:650
+msgid "Step 4 (Disable \"auto_increment\" Column):"
+msgstr ""
+
+#: admin/alter-db-tables-admin-class.php:652
+msgid ""
+"This option will only become available when a database table is selected "
+"which contains an auto-incremented column."
+msgstr ""
+
+#: admin/alter-db-tables-admin-class.php:653
+msgid ""
+"If importing a file which already has an auto-incremented column... this "
+"setting most likely will not be needed."
+msgstr ""
+
+#: admin/alter-db-tables-admin-class.php:656
+msgid "Step 5 (Update Database Rows):"
+msgstr ""
+
+#: admin/alter-db-tables-admin-class.php:658
+msgid ""
+"By default, the plugin will add each .csv row as a new entry in the database."
+msgstr ""
+
+#: admin/alter-db-tables-admin-class.php:659
+msgid ""
+"If the database uses a primary key (auto-increment) column, it will assign "
+"each new row with a new primary key value."
+msgstr ""
+
+#: admin/alter-db-tables-admin-class.php:660
+msgid "This is typically how entries are added to a database."
+msgstr ""
+
+#: admin/alter-db-tables-admin-class.php:661
+msgid ""
+"However; if a duplicate primary key is encountered, the import will stop at "
+"that exact point (and fail)."
+msgstr ""
+
+#: admin/alter-db-tables-admin-class.php:662
+msgid ""
+"If this option is checked, the import process will \"update\" this row "
+"rather than adding a new row."
+msgstr ""
+
+#: admin/alter-db-tables-admin-class.php:668
+msgid "Table Preview:"
+msgstr ""
+
+#: admin/alter-db-tables-admin-class.php:668
+msgid "Reload Table Preview"
+msgstr ""
+
+#: admin/alter-db-tables-admin-class.php:673
+msgid ""
+"After selecting a database table from the dropdown above; the table column "
+"names will be shown."
+msgstr ""
+
+#: admin/alter-db-tables-admin-class.php:674
+msgid ""
+"This may be used as a reference when verifying the .csv file is formatted "
+"properly."
+msgstr ""
+
+#: admin/alter-db-tables-admin-class.php:675
+msgid ""
+"If an \"auto-increment\" column exists; it will be rendered in the color "
+"\"red\"."
+msgstr ""
+
+#: admin/alter-db-tables-admin-class.php:678
+msgid "Delete database table?"
+msgstr ""
+
+#: admin/alter-db-tables-admin-class.php:679
+msgid ""
+"This table will be permanently deleted and cannot be recovered. Proceed?"
+msgstr ""
+
+#: admin/alter-db-tables-admin-class.php:683
+msgid "Invalid File Extension"
+msgstr ""
+
+#: admin/alter-db-tables-admin-class.php:684
+msgid "This is not a valid .csv file extension."
+msgstr ""
+
+#: admin/alter-db-tables-admin-class.php:688
+msgid "Database Table not Selected"
+msgstr ""
+
+#: admin/alter-db-tables-admin-class.php:689
+msgid "First, please select a database table from the dropdown list."
+msgstr ""
+
+#: admin/alter-db-tables-admin-class.php:692
+#: admin/alter-db-tables-admin-class.php:694 admin/views/export.php:83
+#: admin/views/export.php:85 public/alter-db-tables-class.php:75
+msgid "DB Tables Import/Export"
+msgstr ""
+
+#: admin/alter-db-tables-admin-class.php:692
+#: admin/alter-db-tables-admin-class.php:694 admin/views/export.php:83
+#: admin/views/export.php:85
+msgid " by AlterTech "
+msgstr ""
+
+#: admin/alter-db-tables-admin-class.php:759
+msgid "Number of Database Columns:"
+msgstr ""
+
+#: admin/alter-db-tables-admin-class.php:766
+msgid "This table contains an \"auto increment\" column."
+msgstr ""
+
+#: admin/alter-db-tables-admin-class.php:767
+msgid "Please be sure to use unique values in this column from the .csv file."
+msgstr ""
+
+#: admin/alter-db-tables-admin-class.php:768
+msgid ""
+"Alternatively, the \"auto increment\" column may be bypassed by clicking the "
+"checkbox above."
+msgstr ""
+
+#: admin/alter-db-tables-admin-class.php:777
+msgid ""
+"This table contains an \"auto increment\" column that has been removed via "
+"the checkbox above."
+msgstr ""
+
+#: admin/alter-db-tables-admin-class.php:778
+msgid ""
+"This means all new .csv entries will be given a unique \"auto incremented\" "
+"value when imported (typically, a numerical value)."
+msgstr ""
+
+#: admin/alter-db-tables-admin-class.php:779
+msgid "The Column Name of the removed column is"
+msgstr ""
+
+#: admin/alter-db-tables-admin-class.php:789
+msgid "No Database Table Selected."
+msgstr ""
+
+#: admin/alter-db-tables-admin-class.php:791
+msgid "Please select a database table from the dropdown box above."
+msgstr ""
+
+#: admin/views/export.php:20
+msgid ""
+"This plugin allows you to export DB data into CSV or JSON format file. You "
+"can also"
+msgstr ""
+"Questo plugin vi offre la possibilità di esportare dati dal DB nei formati "
+"CSV o JSON. Ma potete anche"
+
+#: admin/views/export.php:20
+msgid "import the content in to database</a> ."
+msgstr "importare contenuti nel database</a> ."
+
+#: admin/views/export.php:28
+msgid "ID"
+msgstr ""
+
+#: admin/views/export.php:29
+msgid "NAME"
+msgstr "NOME"
+
+#: admin/views/export.php:30
+msgid "ACTIONS"
+msgstr "AZIONI"
+
+#: admin/views/export.php:50
+msgid "EXPORT CSV"
+msgstr ""
+
+#: admin/views/export.php:51
+msgid "EXPORT JSON"
+msgstr ""
+
+#: admin/views/export.php:64
+msgid "&laquo;"
+msgstr ""
+
+#: admin/views/export.php:65
+msgid "&raquo;"
+msgstr ""
+
+#: public/alter-db-tables-class.php:76
+msgid ""
+"DB Tables Import / Export by AlterTech two new tools to import and export, "
+"you can choose the tables to be imported with the file .csv or export them "
+"to json and csv."
+msgstr ""
+"DB Tables Import/Export by AlterTech due nuovi strumenti per importare ed "
+"esportare, potrete scegliere le tabelle da importare con file .csv o "
+"esportarle in json e csv"
+
+#: public/inc/requirements.php:178 public/inc/requirements.php:227
+msgid " Required, Detected "
+msgstr ""
+
+#: public/inc/requirements.php:291
+msgid "PHP Extensions Not Found: "
+msgstr ""
+
+#: public/inc/requirements.php:356
+msgid " Required"
+msgstr ""
+
+#: public/inc/requirements.php:461
+msgid "Minimum System Requirements not satisfied for: "
+msgstr ""
+
+#~ msgid ""
+#~ "DB Tables Import / Export by AlterTech two new tools to import and "
+#~ "export, you can choose the tables to be imported with the file. csv or "
+#~ "export them to json and csv."
+#~ msgstr ""
+#~ "DB Tables Import/Export by AlterTech due nuovi strumenti per importare ed "
+#~ "esportare, potrete scegliere le tabelle da importare con file .csv o "
+#~ "esportarle in json e csv"
+
+#~ msgid ""
+#~ "This plugin allows you to export DB data into CSV or JSON format file. "
+#~ "You can also <a href=\""
+#~ msgstr ""
+#~ "Questo plugin vi da la possibilità di esportare dati dalle tabelle del "
+#~ "database in CSV o JSON. Ma potete anche <a href=\""
+
+#~ msgid ""
+#~ "This plugin allows you to insert CSV file data into your WordPress "
+#~ "database table. You can also <a href=\""
+#~ msgstr ""
+#~ "Questo plugin vi da la possibilità di importare dati nel vostro database "
+#~ "con file CSV. Ma potete anche <a href=\""
