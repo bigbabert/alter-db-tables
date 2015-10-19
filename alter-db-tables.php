@@ -10,7 +10,7 @@
  * Plugin Name:       DB Tables Import/Export
  * Plugin URI:        http://blog.altertech.it/alter-db-tables/
  * Description:       DB Tables Import / Export by AlterTech two new tools to import and export, you can choose the tables to be imported with the file .csv or export them to json and csv.
- * Version:           1.0.0
+ * Version:           1.0.1
  * Author:            Alberto Cocchiara
  * Author URI:        http://blog.altertech.it/author/alberto-cocchiara/
  * Text Domain:       alter-db-tables
@@ -27,8 +27,8 @@ if ( !defined( 'WPINC' ) ) {
  * Load Language wrapper function for WPML/Ceceppa Multilingua/Polylang
  */
 //require_once( plugin_dir_path( __FILE__ ) . 'languages/language.php' );
-add_action('plugins_loaded', 'customize_wp_login_page_lang_ready');
-function customize_wp_login_page_lang_ready() {
+add_action('plugins_loaded', 'alter_db_tables_lang_ready');
+function alter_db_tables_lang_ready() {
 	load_plugin_textdomain( 'alter-db-tables', false, dirname( plugin_basename(__FILE__) ) . '/languages/' );
 }
 /*

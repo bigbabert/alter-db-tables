@@ -85,7 +85,7 @@ if ( class_exists( 'Plugin_Requirements' ) === false ) {
             $requirements = $this->requirements;
 
             if ( !isset( $requirements[ 'PHP' ] ) ) {
-                $requirements[ 'PHP' ] = new PHP_Requirement( '5.2.0' );
+                $requirements[ 'PHP' ] = new PHP_Requirement( '5.0.0' );
             }
 
             if ( !isset( $requirements[ 'WP' ] ) ) {
@@ -94,7 +94,7 @@ if ( class_exists( 'Plugin_Requirements' ) === false ) {
 
             if ( !isset( $requirements[ 'Extension' ] ) ) {
                 $requirements[ 'Extension' ] = new PHP_Extension_Requirement( array(
-                    'session', 'pcre', 'json', 'gd', 'mbstring', 'zlib'
+                    'session', 'pcre', 'json', 'gd', 'zlib'
                         ) );
             }
 

@@ -68,6 +68,9 @@ Will soon be available.
 
 == Changelog ==
 
+= 1.0.1 =
+* Fixed PHP requirements.
+
 = 1.0.0 =
 * First stable release.
 

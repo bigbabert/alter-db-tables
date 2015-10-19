@@ -300,11 +300,11 @@ echo '<style>x {color: #ec971f;}</style>';
          * 
 	 */
 
-class at_csv_to_db {
+class alter_db_tables_csv_to_db {
 
     // Setup options variables
     protected  $import_title = 'AT DB <x> ></x> IMPORT';
-    protected $option_name = 'at_csv_to_db';  // Name of the options array
+    protected $option_name = 'alter_db_tables_csv_to_db';  // Name of the options array
     protected $data = array(// Default options values
         'jq_theme' => 'smoothness'
     );
@@ -313,44 +313,44 @@ class at_csv_to_db {
         // Check if is admin
         // We can later update this to include other user roles
         if (is_admin()) {
-            add_action('admin_menu', array($this, 'at_csv_to_db_register'));  // Create admin menu page
-            add_action('admin_init', array($this, 'at_csv_to_db_settings')); // Create settings
-            register_activation_hook(__FILE__, array($this, 'at_csv_to_db_activate')); // Add settings on plugin activation
+            add_action('admin_menu', array($this, 'alter_db_tables_csv_to_db_register'));  // Create admin menu page
+            add_action('admin_init', array($this, 'alter_db_tables_csv_to_db_settings')); // Create settings
+            register_activation_hook(__FILE__, array($this, 'alter_db_tables_csv_to_db_activate')); // Add settings on plugin activation
         }
     }
 
-    public function at_csv_to_db_activate() {
+    public function alter_db_tables_csv_to_db_activate() {
         update_option($this->option_name, $this->data);
     }
 
-    public function at_csv_to_db_register() {
-        $at_csv_to_db_page = add_management_page(__($this->import_title, 'options-general.php'), __($this->import_title, 'at_csv_to_db'), 'manage_options', 'at_csv_to_db_menu_page', array($this, 'at_csv_to_db_menu_page')); // Add submenu page to "Settings" link in WP
-        add_action('admin_print_scripts-' . $at_csv_to_db_page, array($this, 'at_csv_to_db_admin_scripts'));  // Load our admin page scripts (our page only)
-        add_action('admin_print_styles-' . $at_csv_to_db_page, array($this, 'at_csv_to_db_admin_styles'));  // Load our admin page stylesheet (our page only)
+    public function alter_db_tables_csv_to_db_register() {
+        $alter_db_tables_csv_to_db_page = add_management_page(__($this->import_title, 'options-general.php'), __($this->import_title, 'alter_db_tables_csv_to_db'), 'manage_options', 'alter_db_tables_csv_to_db_menu_page', array($this, 'alter_db_tables_csv_to_db_menu_page')); // Add submenu page to "Settings" link in WP
+        add_action('admin_print_scripts-' . $alter_db_tables_csv_to_db_page, array($this, 'alter_db_tables_csv_to_db_admin_scripts'));  // Load our admin page scripts (our page only)
+        add_action('admin_print_styles-' . $alter_db_tables_csv_to_db_page, array($this, 'alter_db_tables_csv_to_db_admin_styles'));  // Load our admin page stylesheet (our page only)
     }
 
-    public function at_csv_to_db_settings() {
-        register_setting('at_csv_to_db_options', $this->option_name, array($this, 'at_csv_to_db_validate'));
+    public function alter_db_tables_csv_to_db_settings() {
+        register_setting('alter_db_tables_csv_to_db_options', $this->option_name, array($this, 'alter_db_tables_csv_to_db_validate'));
     }
 
-    public function at_csv_to_db_validate($input) {
+    public function alter_db_tables_csv_to_db_validate($input) {
         $valid = array();
         $valid['jq_theme'] = $input['jq_theme'];
 
         return $valid;
     }
 
-    public function at_csv_to_db_admin_scripts() {
+    public function alter_db_tables_csv_to_db_admin_scripts() {
         wp_enqueue_script('media-upload');  // For WP media uploader
         wp_enqueue_script('thickbox');  // For WP media uploader
         wp_enqueue_script('jquery-ui-tabs');  // For admin panel page tabs
         wp_enqueue_script('jquery-ui-dialog');  // For admin panel popup alerts
 
-        wp_enqueue_script('at_csv_to_db', plugins_url('/assets/js/at_page.js', __FILE__), array('jquery'));  // Apply admin page scripts
-        wp_localize_script('at_csv_to_db', 'at_csv_to_db_pass_js_vars', array('ajax_image' => plugin_dir_url(__FILE__) . 'images/loading.gif', 'ajaxurl' => admin_url('admin-ajax.php')));
+        wp_enqueue_script('alter_db_tables_csv_to_db', plugins_url('/assets/js/at_page.js', __FILE__), array('jquery'));  // Apply admin page scripts
+        wp_localize_script('alter_db_tables_csv_to_db', 'alter_db_tables_csv_to_db_pass_js_vars', array('ajax_image' => plugin_dir_url(__FILE__) . 'images/loading.gif', 'ajaxurl' => admin_url('admin-ajax.php')));
     }
 
-    public function at_csv_to_db_admin_styles() {
+    public function alter_db_tables_csv_to_db_admin_styles() {
         wp_enqueue_style('thickbox');  // For WP media uploader
         wp_enqueue_style('sdm_admin_styles', plugins_url('/assets/css/admin.css', __FILE__));  // Apply admin page styles
         // Get option for jQuery theme
@@ -360,7 +360,7 @@ class at_csv_to_db {
         // For jquery ui styling - Direct from jquery
     }
 
-    public function at_csv_to_db_menu_page() {
+    public function alter_db_tables_csv_to_db_menu_page() {
 
         // Set variables		
         global $wpdb;
@@ -376,14 +376,14 @@ class at_csv_to_db {
             $del_qry_success = $wpdb->query($del_qry);
 
             if ($del_qry_success) {
-                $success_message .= __('Congratulations!  The database table has been deleted successfully.', 'at_csv_to_db');
+                $success_message .= __('Congratulations!  The database table has been deleted successfully.', 'alter_db_tables_csv_to_db');
             } else {
-                $error_message .= '* ' . __('Error deleting table. Please verify the table exists.', 'at_csv_to_db');
+                $error_message .= '* ' . __('Error deleting table. Please verify the table exists.', 'alter_db_tables_csv_to_db');
             }
         }
 
         if ((isset($_POST['export_to_csv_button'])) && (empty($_POST['table_select']))) {
-            $error_message .= '* ' . __('No Database Table was selected to export. Please select a Database Table for exportation.', 'at_csv_to_db') . '<br />';
+            $error_message .= '* ' . __('No Database Table was selected to export. Please select a Database Table for exportation.', 'alter_db_tables_csv_to_db') . '<br />';
         }
 
         if ((isset($_POST['export_to_csv_button'])) && (!empty($_POST['table_select']))) {
@@ -395,16 +395,16 @@ class at_csv_to_db {
 
             // If the "Select Table" input field is empty
             if (empty($_POST['table_select'])) {
-                $error_message .= '* ' . __('No Database Table was selected. Please select a Database Table.', 'at_csv_to_db') . '<br />';
+                $error_message .= '* ' . __('No Database Table was selected. Please select a Database Table.', 'alter_db_tables_csv_to_db') . '<br />';
             }
             // If the "Select Input File" input field is empty
             if (empty($_POST['csv_file'])) {
-                $error_message .= '* ' . __('No Input File was selected. Please enter an Input File.', 'at_csv_to_db') . '<br />';
+                $error_message .= '* ' . __('No Input File was selected. Please enter an Input File.', 'alter_db_tables_csv_to_db') . '<br />';
             }
             // Check that "Input File" has proper .csv file extension
             $ext = pathinfo($_POST['csv_file'], PATHINFO_EXTENSION);
             if ($ext !== 'csv') {
-                $error_message .= '* ' . __('The Input File does not contain the .csv file extension. Please choose a valid .csv file.', 'at_csv_to_db');
+                $error_message .= '* ' . __('The Input File does not contain the .csv file extension. Please choose a valid .csv file.', 'alter_db_tables_csv_to_db');
             }
 
             // If all fields are input; and file is correct .csv format; continue
@@ -442,7 +442,7 @@ class at_csv_to_db {
                         $num_var = $_POST['sel_start_row'] - 1;  // Subtract one to make counting easy on the non-techie folk!  (1 is actually 0 in binary)
                         // If user input number exceeds available .csv rows
                         if ($num_var > count($values)) {
-                            $error_message .= '* ' . __('Starting Row value exceeds the number of entries being updated to the database from the .csv file.', 'at_csv_to_db') . '<br />';
+                            $error_message .= '* ' . __('Starting Row value exceeds the number of entries being updated to the database from the .csv file.', 'alter_db_tables_csv_to_db') . '<br />';
                             $too_many = 'true';  // set alert variable
                         }
                         // Else splice array and remove number (rows) user selected
@@ -453,9 +453,9 @@ class at_csv_to_db {
 
                     // If there are no rows in the .csv file AND the user DID NOT input more rows than available from the .csv file
                     if (empty($values) && ($too_many !== 'true')) {
-                        $error_message .= '* ' . __('Columns do not match.', 'at_csv_to_db') . '<br />';
-                        $error_message .= '* ' . __('The number of columns in the database for this table does not match the number of columns attempting to be imported from the .csv file.', 'at_csv_to_db') . '<br />';
-                        $error_message .= '* ' . __('Please verify the number of columns attempting to be imported in the "Select Input File" exactly matches the number of columns displayed in the "Table Preview".', 'at_csv_to_db') . '<br />';
+                        $error_message .= '* ' . __('Columns do not match.', 'alter_db_tables_csv_to_db') . '<br />';
+                        $error_message .= '* ' . __('The number of columns in the database for this table does not match the number of columns attempting to be imported from the .csv file.', 'alter_db_tables_csv_to_db') . '<br />';
+                        $error_message .= '* ' . __('Please verify the number of columns attempting to be imported in the "Select Input File" exactly matches the number of columns displayed in the "Table Preview".', 'alter_db_tables_csv_to_db') . '<br />';
                     } else {
                         // If the user DID NOT input more rows than are available from the .csv file
                         if ($too_many !== 'true') {
@@ -490,25 +490,25 @@ class at_csv_to_db {
 
                             // If db db_query_update is successful
                             if ($db_query_update) {
-                                $success_message = __('Congratulations!  The database has been updated successfully.', 'at_csv_to_db');
+                                $success_message = __('Congratulations!  The database has been updated successfully.', 'alter_db_tables_csv_to_db');
                             }
                             // If db db_query_insert is successful
                             elseif ($db_query_insert) {
-                                $success_message = __('Congratulations!  The database has been updated successfully.', 'at_csv_to_db');
-                                $success_message .= '<br /><strong>' . count($values) . '</strong> ' . __('record(s) were inserted into the', 'at_csv_to_db') . ' <strong>' . $_POST['table_select'] . '</strong> ' . __('database table.', 'at_csv_to_db');
+                                $success_message = __('Congratulations!  The database has been updated successfully.', 'alter_db_tables_csv_to_db');
+                                $success_message .= '<br /><strong>' . count($values) . '</strong> ' . __('record(s) were inserted into the', 'alter_db_tables_csv_to_db') . ' <strong>' . $_POST['table_select'] . '</strong> ' . __('database table.', 'alter_db_tables_csv_to_db');
                             }
                             // If db db_query_insert is successful AND there were no rows to udpate
                             elseif (($db_query_update === 0) && ($db_query_insert === '')) {
-                                $message_info_style .= '* ' . __('There were no rows to update. All .csv values already exist in the database.', 'at_csv_to_db') . '<br />';
+                                $message_info_style .= '* ' . __('There were no rows to update. All .csv values already exist in the database.', 'alter_db_tables_csv_to_db') . '<br />';
                             } else {
-                                $error_message .= '* ' . __('There was a problem with the database query.', 'at_csv_to_db') . '<br />';
-                                $error_message .= '* ' . __('A duplicate entry was found in the database for a .csv file entry.', 'at_csv_to_db') . '<br />';
-                                $error_message .= '* ' . __('If necessary; please use the option below to "Update Database Rows".', 'at_csv_to_db') . '<br />';
+                                $error_message .= '* ' . __('There was a problem with the database query.', 'alter_db_tables_csv_to_db') . '<br />';
+                                $error_message .= '* ' . __('A duplicate entry was found in the database for a .csv file entry.', 'alter_db_tables_csv_to_db') . '<br />';
+                                $error_message .= '* ' . __('If necessary; please use the option below to "Update Database Rows".', 'alter_db_tables_csv_to_db') . '<br />';
                             }
                         }
                     }
                 } else {
-                    $error_message .= '* ' . __('No valid .csv file was found at the specified url. Please check the "Select Input File" field and ensure it points to a valid .csv file.', 'at_csv_to_db') . '<br />';
+                    $error_message .= '* ' . __('No valid .csv file was found at the specified url. Please check the "Select Input File" field and ensure it points to a valid .csv file.', 'alter_db_tables_csv_to_db') . '<br />';
                 }
             }
         }
@@ -517,7 +517,7 @@ class at_csv_to_db {
         if (!empty($message_info_style)) {
             echo '<div class="info_message_dismiss">';
             echo $message_info_style;
-            echo '<br /><em>(' . __('click to dismiss', 'at_csv_to_db') . ')</em>';
+            echo '<br /><em>(' . __('click to dismiss', 'alter_db_tables_csv_to_db') . ')</em>';
             echo '</div>';
         }
 
@@ -525,7 +525,7 @@ class at_csv_to_db {
         if (!empty($error_message)) {
             echo '<div class="error_message">';
             echo $error_message;
-            echo '<br /><em>(' . __('click to dismiss', 'at_csv_to_db') . ')</em>';
+            echo '<br /><em>(' . __('click to dismiss', 'alter_db_tables_csv_to_db') . ')</em>';
             echo '</div>';
         }
 
@@ -533,7 +533,7 @@ class at_csv_to_db {
         if (!empty($success_message)) {
             echo '<div class="success_message">';
             echo $success_message;
-            echo '<br /><em>(' . __('click to dismiss', 'at_csv_to_db') . ')</em>';
+            echo '<br /><em>(' . __('click to dismiss', 'alter_db_tables_csv_to_db') . ')</em>';
             echo '</div>';
         }
         ?>
@@ -551,7 +551,7 @@ class at_csv_to_db {
 
                 <div id="tabs-1">
 
-                    <form id="at_csv_to_db_form" method="post" action="">
+                    <form id="alter_db_tables_csv_to_db_form" method="post" action="">
                         <table class="form-table"> 
 
                             <tr valign="top"><th scope="row"><?php _e('Select Database Table:', 'alter-db-tables'); ?></th>
@@ -639,7 +639,7 @@ class at_csv_to_db {
                         <li><?php _e('The "Number of .csv file Columns" will populate when the Input File field contains a valid .csv file.', 'alter-db-tables'); ?></li>
                     </ul>
                     <br /><br />
-        <?php _e('Step 3 (Select Starting Row):', 'at_csv_to_db'); ?>
+        <?php _e('Step 3 (Select Starting Row):', 'alter_db_tables_csv_to_db'); ?>
                     <ul>
                         <li><?php _e('The .csv file will contain rows, which get converted to database table entries.', 'alter-db-tables'); ?></li>
                         <li><?php _e('This option will allow customization of the starting row of the .csv file to be used during the importation.', 'alter-db-tables'); ?></li>
@@ -697,12 +697,12 @@ class at_csv_to_db {
 
 }
 
-$at_csv_to_db = new at_csv_to_db();
+$alter_db_tables_csv_to_db = new alter_db_tables_csv_to_db();
 
 //  Ajax call for showing table column names
-add_action('wp_ajax_at_csv_to_db_get_columns', 'at_csv_to_db_get_columns_callback');
+add_action('wp_ajax_alter_db_tables_csv_to_db_get_columns', 'alter_db_tables_get_columns_callback');
 
-function at_csv_to_db_get_columns_callback() {
+function alter_db_tables_get_columns_callback() {
 
     // Set variables
     global $wpdb;
@@ -756,16 +756,16 @@ function at_csv_to_db_get_columns_callback() {
             }
         }
         $content .= '</tr></table><br />';
-        $content .= __('Number of Database Columns:', 'at_csv_to_db') . ' <span id="column_count"><strong>' . count($column_names) . '</strong></span><br />';
+        $content .= __('Number of Database Columns:', 'alter_db_tables_csv_to_db') . ' <span id="column_count"><strong>' . count($column_names) . '</strong></span><br />';
 
         // If there is an auto_increment column in the returned results
         if ((isset($run_qry[0]->EXTRA)) && (isset($run_qry[0]->COLUMN_NAME))) {
             // If user DID NOT click the auto_increment checkbox
             if ($disable_autoinc === 'false') {
                 $content .= '<div class="warning_message">';
-                $content .= __('This table contains an "auto increment" column.', 'at_csv_to_db') . '<br />';
-                $content .= __('Please be sure to use unique values in this column from the .csv file.', 'at_csv_to_db') . '<br />';
-                $content .= __('Alternatively, the "auto increment" column may be bypassed by clicking the checkbox above.', 'at_csv_to_db') . '<br />';
+                $content .= __('This table contains an "auto increment" column.', 'alter_db_tables_csv_to_db') . '<br />';
+                $content .= __('Please be sure to use unique values in this column from the .csv file.', 'alter_db_tables_csv_to_db') . '<br />';
+                $content .= __('Alternatively, the "auto increment" column may be bypassed by clicking the checkbox above.', 'alter_db_tables_csv_to_db') . '<br />';
                 $content .= '</div>';
 
                 // Send additional response
@@ -774,9 +774,9 @@ function at_csv_to_db_get_columns_callback() {
             // If the user clicked the auto_increment checkbox
             if ($disable_autoinc === 'true') {
                 $content .= '<div class="info_message">';
-                $content .= __('This table contains an "auto increment" column that has been removed via the checkbox above.', 'at_csv_to_db') . '<br />';
-                $content .= __('This means all new .csv entries will be given a unique "auto incremented" value when imported (typically, a numerical value).', 'at_csv_to_db') . '<br />';
-                $content .= __('The Column Name of the removed column is', 'at_csv_to_db') . ' <strong><em>' . $run_qry[0]->COLUMN_NAME . '</em></strong>.<br />';
+                $content .= __('This table contains an "auto increment" column that has been removed via the checkbox above.', 'alter_db_tables_csv_to_db') . '<br />';
+                $content .= __('This means all new .csv entries will be given a unique "auto incremented" value when imported (typically, a numerical value).', 'alter_db_tables_csv_to_db') . '<br />';
+                $content .= __('The Column Name of the removed column is', 'alter_db_tables_csv_to_db') . ' <strong><em>' . $run_qry[0]->COLUMN_NAME . '</em></strong>.<br />';
                 $content .= '</div>';
 
                 // Send additional response 
@@ -786,9 +786,9 @@ function at_csv_to_db_get_columns_callback() {
     } else {
         $content = '';
         $content .= '<table id="ajax_table"><tr><td>';
-        $content .= __('No Database Table Selected.', 'at_csv_to_db');
+        $content .= __('No Database Table Selected.', 'alter_db_tables_csv_to_db');
         $content .= '<br />';
-        $content .= __('Please select a database table from the dropdown box above.', 'at_csv_to_db');
+        $content .= __('Please select a database table from the dropdown box above.', 'alter_db_tables_csv_to_db');
         $content .= '</td></tr></table>';
     }
 
@@ -800,9 +800,9 @@ function at_csv_to_db_get_columns_callback() {
 }
 
 // Ajax call to process .csv file for column count
-add_action('wp_ajax_at_csv_to_db_get_csv_cols', 'at_csv_to_db_get_csv_cols_callback');
+add_action('wp_ajax_alter_db_tables_csv_to_db_get_csv_cols', 'alter_db_tables_get_csv_cols_callback');
 
-function at_csv_to_db_get_csv_cols_callback() {
+function alter_db_tables_get_csv_cols_callback() {
 
     // Get file upload url
     $file_upload_url = $_POST['file_upload_url'];
